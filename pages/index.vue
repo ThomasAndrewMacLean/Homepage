@@ -36,7 +36,6 @@
                 title: pr.content.title,
                 link: pr.content.link,
                 link_code: pr.content.link_code,
-                description: pr.content.description,
                 thumbnailImage: pr.content.thumbnail,
                 techniques: pr.content.techniques.map(t => t.name)
               }

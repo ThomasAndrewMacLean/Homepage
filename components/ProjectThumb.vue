@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="id">
+  <nuxt-link :to="'project/'+id">
     <article class="post-preview">
       <img :src="'https:' + thumbnailImage" alt="">
       <div class="post-preview-content">
@@ -41,8 +41,8 @@
   }
 
   .post-preview {
-   margin:3rem;
-   padding:2rem;
+    margin: 3rem;
+    padding: 2rem;
   }
 
   .post-preview-thumbnail {
