@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h1 class="title">Hellokidoki</h1>
-        <project-thumb v-for="project in projects" :key="project.id" :title="project.title" :excerpt="project.description" :thumbnailImage="project.thumbnailImage"
+        <project-thumb class="thumbs" v-for="project in projects" :key="project.id" :title="project.title" :excerpt="project.description" :thumbnailImage="project.thumbnailImage"
           :id="project.id" />
     </div>
   </section>
@@ -43,7 +43,7 @@
           }
         }).catch((res) => {
           context.error({
-            statusCode: res.response.status,
+              statusCode: res.response.status,
             message: res.response.data
           })
         })
@@ -60,7 +60,13 @@
     align-items: center;
     text-align: center;
   }
-
+  .thumbs {
+        width: 33.3333%;
+    height: 25rem;
+    overflow: hidden;
+    float: left;
+    padding: 2rem;
+  }
   .title {
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     /* 1 */

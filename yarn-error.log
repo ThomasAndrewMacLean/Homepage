@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js generate
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js deploy
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/tmacair/Library/Python/2.7/bin/aws:/Library/Frameworks/Mono.framework/Versions/Current/Commands
@@ -26,7 +26,8 @@ npm manifest:
       "start": "nuxt start",
       "generate": "nuxt generate",
       "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-      "precommit": "npm run lint"
+      "precommit": "npm run lint",
+      "deploy": "generate && surge ./dist"
     },
     "dependencies": {
       "@nuxtjs/axios": "^5.0.0",
@@ -6150,9 +6151,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 127
   Command: sh
-  Arguments: -c nuxt generate
+  Arguments: -c generate && surge ./dist
   Directory: /Users/tmacair/Projects/project-blog
   Output:
   

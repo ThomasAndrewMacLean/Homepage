@@ -1,6 +1,5 @@
 <template>
   <div id="post" v-editable="blok">
-    <div>heloktset</div>
     <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
     <section class="post-content">
       <h1>{{ title }}</h1>
@@ -30,7 +29,7 @@
         .then(res => {
           console.log('res');
           console.log(res);
-            const blok = res.data.story.content;
+          const blok = res.data.story.content;
           return {
             blok: blok,
             image: blok.thumbnail,
@@ -61,6 +60,7 @@
     height: 300px;
     background-size: cover;
     background-position: center;
+    -webkit-filter: blur(10px);
   }
 
   .post-content {
