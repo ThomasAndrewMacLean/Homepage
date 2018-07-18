@@ -1,11 +1,11 @@
 <template>
-    <nuxt-link :to="'projects/'+id">
-        <article class="post-preview">
-            <h1>{{ title }}</h1>
+    <div class="post-preview">
+        <nuxt-link :to="'projects/'+id">
+            <h1 class="preview-title">{{ title }}</h1>
             <img class="preview-photo" :src="'https:' + thumbnailImage" alt="">
-            <p>{{ excerpt }}</p>
-        </article>
-    </nuxt-link>
+            <p class="preview-descr">{{ excerpt }}</p>
+        </nuxt-link>
+    </div>
 </template>
 
 <script>
@@ -32,7 +32,11 @@
 
 </script>
 
-<style>
+<style scoped>
+    a {
+        text-decoration: none;
+    }
+
     .thumb {
         width: 25%;
         outline: 1px solid greenyellow;
@@ -50,6 +54,15 @@
         object-fit: cover;
     }
 
+    .preview-title {
+        margin: 2rem;
+        color: #35495e;
+    }
+
+    .preview-descr {
+        margin: 1rem;
+        color: #35495e;
+    }
 
     .post-preview-thumbnail {
         height: 100%;
