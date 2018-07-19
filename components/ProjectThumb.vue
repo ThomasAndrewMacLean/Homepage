@@ -37,6 +37,10 @@
         text-decoration: none;
     }
 
+    h1 {
+        white-space: nowrap;
+    }
+
     .thumb {
         width: 25%;
         outline: 1px solid greenyellow;
@@ -52,6 +56,11 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
+    }
+
+    .preview-photo:hover {
+        -webkit-filter: blur(1px);
+        box-shadow: 0px 0px 20px 0px #35495e;
     }
 
     .preview-title {

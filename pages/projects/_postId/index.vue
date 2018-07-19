@@ -3,15 +3,16 @@
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
         <section class="post-content">
             <h1>{{ title }}</h1>
-            <a :href="link">{{link}}</a><br>
-            <a :href="link_code">{{link_code}}</a><br>
-            <a :href="link_code2">{{link_code2}}</a><br>
+            <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
+            <a class="sm-m link" :href="link_code" target="_blank">{{link_code}}</a>
+            <a class="sm-m link" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
 
 
-            <p>{{ description }}</p>
+            <p class="sm-m link">{{ description }}</p>
 
-            <ul>
-                <li v-for="t in techniques" :key="t">
+            <p class="sm-m link">Techniques</p>
+            <ul class="link">
+                <li class="sm-m" v-for="t in techniques" :key="t">
                     {{t}}
                 </li>
             </ul>
@@ -56,18 +57,29 @@
 
 </script>
 
-<style>
+<style scoped>
+    h1 {
+        padding: 3rem 0 1rem 2rem;
+        margin-left: -1rem;
+    }
+
+    .link {
+        clear: both;
+        float: left;
+    }
+
+    .sm-m {
+        margin: 1rem;
+    }
+
     .post-thumbnail {
         width: 100%;
         height: 300px;
         background-size: cover;
         background-position: center;
-        -webkit-filter: blur(10px);
     }
 
-    .post-thumbnail:hover {
-        -webkit-filter: blur(0px);
-    }
+  
 
     .post-content {
         width: 80%;
@@ -77,6 +89,11 @@
 
     .post-content p {
         white-space: pre-line;
+    }
+
+    #post {
+        width: 100vw;
+        overflow: hidden;
     }
 
 </style>
