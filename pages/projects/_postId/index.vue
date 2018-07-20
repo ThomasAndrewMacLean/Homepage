@@ -26,8 +26,8 @@
     export default {
         asyncData(context) {
             return context.app.$storyapi
-                .get("cdn/stories/projects/" + context.params.postId, {
-                    version: process.env.NODE_ENV == "production" ? "published" : "draft"
+                .get('cdn/stories/projects/' + context.params.postId, {
+                    version: process.env.NODE_ENV == 'production' ? 'published' : 'draft'
                 })
                 .then(res => {
                     console.log('res');
@@ -49,7 +49,7 @@
         },
         mounted() {
             this.$storyblok.init();
-            this.$storyblok.on("change", () => {
+            this.$storyblok.on('change', () => {
                 location.reload(true);
             });
         }
@@ -79,7 +79,7 @@
         background-position: center;
     }
 
-  
+
 
     .post-content {
         width: 80%;

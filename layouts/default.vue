@@ -15,13 +15,13 @@
 </template>
 
 <script>
-    import theHeader from '@/components/Header'
+    import theHeader from '@/components/Header';
 
     export default {
         components: {
             theHeader
         }
-    }
+    };
 
 </script>
 
@@ -44,10 +44,12 @@
         box-sizing: border-box;
         margin: 0;
     }
- /* //#faffb8
+
+    /* //#faffb8
   //#c5f0a4
   //#35b0ab
   //#226b80 */
+
     footer {
         background: #c5f0a4;
         margin-top: 2rem;
