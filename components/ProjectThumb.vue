@@ -51,6 +51,7 @@ a {
 
 .preview-photo:hover {
     -webkit-filter: blur(1px);
+    filter: blur(1px);
     box-shadow: 0px 0px 20px 0px #35495e;
 }
 
