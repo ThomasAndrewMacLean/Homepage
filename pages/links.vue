@@ -40,7 +40,7 @@
                         links: res.data.stories.map(l => {
                             return {
                                 description: l.content.description,
-                                link: l.content.link
+                                link: l.content.link.url
                             };
                         })
                     };

@@ -19,6 +19,10 @@ module.exports = {
             hid: 'description',
             name: 'description',
             content: pkg.description
+        },
+        {
+            name:'google-site-verification',
+            content:'bI9hWQ4QqE1bNeSREWXaybhSEIMULuhW2ArIiyVcUdA'
         }
         ],
         link: [{

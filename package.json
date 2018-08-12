@@ -1,7 +1,7 @@
 {
     "name": "project-blog",
     "version": "1.0.0",
-    "description": "nuxt blog",
+    "description": "Thomas MacLean Overview all Sites and Side projects",
     "author": "ThomasAndrewMacLean",
     "private": true,
     "config": {
