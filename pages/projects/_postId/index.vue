@@ -1,12 +1,14 @@
 <template>
     <div id="post" v-editable="blok">
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
-        <no-ssr>
-            <v-touch @swiperight="goBack">
-
         <section class="post-content">
-            <h1>{{ title }} <span class="create-date">({{new Date(date).toLocaleDateString('en-GB', {  year: 'numeric', month: 'long' })}})</span></h1>
-            <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
+            <h1>{{ title }}
+                <span class="create-date">({{new Date(date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}})</span>
+            </h1>
+
+            <code>
+                <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
+            </code>
             <a class="sm-m link" :href="link_code" target="_blank">{{link_code}}</a>
             <a class="sm-m link" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
 
@@ -20,90 +22,91 @@
                 </li>
             </ul>
         </section>
-            </v-touch>
-        </no-ssr>
     </div>
 </template>
 
 <script>
-// console.log(context.params);
+    // console.log(context.params);
 
-export default {
-    asyncData(context) {
-        return context.app.$storyapi
-            .get('cdn/stories/projects/' + context.params.postId, {
-                version:
-                    process.env.NODE_ENV == 'production' ? 'published' : 'draft'
-            })
-            .then(res => {
-                console.log('res');
-                console.log(res);
-                const blok = res.data.story.content;
-                return {
-                    blok: blok,
-                    image: blok.thumbnail,
-                    title: blok.title,
-                    //  content: blok.content
-                    date: blok.date,
-                    description: blok.description,
-                    link: blok.link.url,
-                    link_code: blok.link_code.url,
-                    link_code2: blok.link_code2 && blok.link_code2.url,
-                    techniques: blok.techniques.map(t => t.name)
-                };
+    export default {
+        asyncData(context) {
+            return context.app.$storyapi
+                .get('cdn/stories/projects/' + context.params.postId, {
+                    version: process.env.NODE_ENV == 'production' ? 'published' : 'draft'
+                })
+                .then(res => {
+                    console.log('res');
+                    console.log(res);
+                    const blok = res.data.story.content;
+                    return {
+                        blok: blok,
+                        image: blok.thumbnail,
+                        title: blok.title,
+                        //  content: blok.content
+                        date: blok.date,
+                        description: blok.description,
+                        link: blok.link.url,
+                        link_code: blok.link_code.url,
+                        link_code2: blok.link_code2 && blok.link_code2.url,
+                        techniques: blok.techniques.map(t => t.name)
+                    };
+                });
+        },
+        mounted() {
+            this.$storyblok.init();
+            this.$storyblok.on('change', () => {
+                location.reload(true);
             });
-    },
-    mounted() {
-        this.$storyblok.init();
-        this.$storyblok.on('change', () => {
-            location.reload(true);
-        });
-    },
-    methods: {
-        goBack() {
-            console.log('i wanna go home');
-            this.$router.push('/');
+        },
+        methods: {
+            goBack() {
+                console.log('i wanna go home');
+                this.$router.push('/');
+            }
         }
-    }
-};
+    };
+
 </script>
 
 <style scoped>
-h1 {
-    padding: 3rem 0 1rem 2rem;
-    margin-left: -1rem;
-}
-.create-date {
-    font-size: 1rem;
-}
-.link {
-    clear: both;
-    float: left;
-}
+    h1 {
+        padding: 3rem 0 1rem 2rem;
+        margin-left: -1rem;
+    }
 
-.sm-m {
-    margin: 1rem;
-}
+    .create-date {
+        font-size: 1rem;
+    }
 
-.post-thumbnail {
-    width: 100%;
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-}
+    .link {
+        clear: both;
+        float: left;
+    }
 
-.post-content {
-    width: 80%;
-    max-width: 500px;
-    margin: auto;
-}
+    .sm-m {
+        margin: 1rem;
+    }
 
-.post-content p {
-    white-space: pre-line;
-}
+    .post-thumbnail {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
 
-#post {
-    width: 100vw;
-    overflow: hidden;
-}
+    .post-content {
+        width: 80%;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .post-content p {
+        white-space: pre-line;
+    }
+
+    #post {
+        width: 100vw;
+        /* overflow: hidden; */
+    }
+
 </style>

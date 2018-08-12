@@ -4,6 +4,11 @@
     "description": "nuxt blog",
     "author": "ThomasAndrewMacLean",
     "private": true,
+    "config": {
+        "nuxt": {
+            "host": "0.0.0.0"
+        }
+    },
     "scripts": {
         "dev": "nuxt",
         "build": "nuxt build",
@@ -17,8 +22,7 @@
     "dependencies": {
         "@nuxtjs/axios": "^5.0.0",
         "nuxt": "^1.0.0",
-        "storyblok-nuxt": "^0.0.6",
-        "vue-touch": "^2.0.0-beta.4"
+        "storyblok-nuxt": "^0.0.6"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.1",

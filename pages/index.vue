@@ -3,7 +3,7 @@
         <div class="div-wrap">
             <h1 class="title">Stuff and so,... and some stuff</h1>
             <div class="input-wrap">
-                <input type="text" v-model="searchInput" @input="searchTechniques" autofocus>
+                <input type="text" v-model="searchInput" @input="searchTechniques">
             </div>
             <project-thumb v-bind:class="{ 'selected': project.selected}" class="thumbs" v-for="project in projects" :key="project.id"
                 :title="project.title" :excerpt="project.description" :thumbnailImage="project.thumbnailImage" :id="project.id"
