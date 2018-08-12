@@ -1,6 +1,9 @@
 <template>
     <div id="post" v-editable="blok">
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+        <no-ssr>
+            <v-touch @swiperight="goBack">
+
         <section class="post-content">
             <h1>{{ title }} <span class="create-date">({{new Date(date).toLocaleDateString('en-GB', {  year: 'numeric', month: 'long' })}})</span></h1>
             <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
@@ -17,6 +20,8 @@
                 </li>
             </ul>
         </section>
+            </v-touch>
+        </no-ssr>
     </div>
 </template>
 
@@ -53,6 +58,12 @@ export default {
         this.$storyblok.on('change', () => {
             location.reload(true);
         });
+    },
+    methods: {
+        goBack() {
+            console.log('i wanna go home');
+            this.$router.push('/');
+        }
     }
 };
 </script>

@@ -16,9 +16,9 @@
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.0.0",
-        "hammerjs": "^2.0.8",
         "nuxt": "^1.0.0",
-        "storyblok-nuxt": "^0.0.6"
+        "storyblok-nuxt": "^0.0.6",
+        "vue-touch": "^2.0.0-beta.4"
     },
     "devDependencies": {
         "babel-eslint": "^8.2.1",

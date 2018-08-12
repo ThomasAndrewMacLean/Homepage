@@ -7,7 +7,7 @@ module.exports = {
    ** Headers of the page
    */
     head: {
-        title: pkg.name,
+        title: 'Thomas MacLean',
         meta: [{
             charset: 'utf-8'
         },
@@ -44,7 +44,10 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
     plugins: [
-
+        {
+            src: '~plugins/touch',
+            ssr: false
+        }
     ],
 
     /*

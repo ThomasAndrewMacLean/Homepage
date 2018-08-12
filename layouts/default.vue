@@ -1,7 +1,9 @@
 <template>
-    <div class="layout">
+    <div id="stage" class="layout">
         <the-header/>
+        
         <nuxt class="nuxt"/>
+  
         <footer>
             <code>
                 made by:
@@ -16,22 +18,22 @@
 
 <script>
 import theHeader from '@/components/Header';
+//import Hammer from 'hammerjs';
 
 export default {
     components: {
         theHeader
     },
-    head() {
-        return {
-            title: 'Thomas MacLean',
-            meta: [
-                {
-                    hid: 'Thomas MacLean Portfolio',
-                    name: 'Thomas MacLean Portfolio',
-                    content: 'Thomas MacLean Portfolio'
-                }
-            ]
-        };
+    methods: {
+        test() {
+            console.log('it is tested');
+        }
+    },
+    mounted() {
+        console.log('ok');
+        const stage = document.getElementById('stage');
+        // const mc = Hammer(stage);
+        //mc.on('swiperight', this.test());
     }
 };
 </script>
@@ -66,6 +68,7 @@ html {
     width: 100vw;
     overflow: hidden;
 }
+
 footer {
     background: #c5f0a4;
     margin-top: 2rem;
@@ -90,5 +93,13 @@ footer {
     /* overflow hidden so it wont scroll horizontally on firefox 
     because of the scrollbar */
     overflow: hidden;
+}
+@media (max-width: 300px) {
+    footer {
+        height: 3rem;
+    }
+    .nuxt {
+        min-height: calc(100vh - 8rem);
+    }
 }
 </style>
