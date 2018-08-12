@@ -3,14 +3,17 @@
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
         <section class="post-content">
             <h1>{{ title }}
-                <span class="create-date">({{new Date(date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}})</span>
+                <span class="create-date">({{new Date(date.split(" ")[0]).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}})</span>
             </h1>
-
             <code>
                 <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
             </code>
-            <a class="sm-m link" :href="link_code" target="_blank">{{link_code}}</a>
-            <a class="sm-m link" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
+            <code>
+                <a class="sm-m link" :href="link_code" target="_blank">{{link_code}}</a>
+            </code>
+            <code>
+                <a class="sm-m link" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
+            </code>
 
 
             <p class="sm-m link">{{ description }}</p>
