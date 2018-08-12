@@ -1,30 +1,32 @@
 {
-  "name": "project-blog",
-  "version": "1.0.0",
-  "description": "nuxt blog",
-  "author": "ThomasAndrewMacLean",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "deploy": "nuxt generate && surge ./dist"
-  },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.0.0",
-    "nuxt": "^1.0.0",
-    "storyblok-nuxt": "^0.0.6"
-  },
-  "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "cross-env": "^5.0.1",
-    "eslint": "^4.15.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-html": "^4.0.5",
-    "eslint-plugin-vue": "^4.0.0",
-    "surge": "^0.20.1"
-  }
+    "name": "project-blog",
+    "version": "1.0.0",
+    "description": "nuxt blog",
+    "author": "ThomasAndrewMacLean",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+        "precommit": "npm run lint",
+        "deploy": "nuxt generate && surge ./dist",
+        "prepush": "yarn deploy"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.0.0",
+        "nuxt": "^1.0.0",
+        "storyblok-nuxt": "^0.0.6"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.1",
+        "cross-env": "^5.0.1",
+        "eslint": "^4.15.0",
+        "eslint-loader": "^2.0.0",
+        "eslint-plugin-html": "^4.0.5",
+        "eslint-plugin-vue": "^4.0.0",
+        "husky": "^0.14.3",
+        "surge": "^0.20.1"
+    }
 }

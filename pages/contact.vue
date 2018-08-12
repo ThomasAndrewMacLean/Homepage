@@ -1,7 +1,6 @@
 <template>
   <section class="container">
-hi
-  </section>
+ <a href="mailto:hello@thomasmaclean.be">send an email</a> </section>
 </template>
 
 <script>
