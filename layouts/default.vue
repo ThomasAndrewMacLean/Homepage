@@ -18,22 +18,10 @@
 
 <script>
     import theHeader from '@/components/Header';
-    //import Hammer from 'hammerjs';
 
     export default {
         components: {
             theHeader
-        },
-        methods: {
-            test() {
-                console.log('it is tested');
-            }
-        },
-        mounted() {
-            console.log('ok');
-            const stage = document.getElementById('stage');
-            // const mc = Hammer(stage);
-            //mc.on('swiperight', this.test());
         }
     };
 

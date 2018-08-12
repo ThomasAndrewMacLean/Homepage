@@ -59,10 +59,7 @@
             });
         },
         methods: {
-            goBack() {
-                console.log('i wanna go home');
-                this.$router.push('/');
-            }
+
         }
     };
 
