@@ -87,24 +87,24 @@
     }
 
     ::selection {
-        background: #ffb7b7;
+        background: var(--color-five);
         /* WebKit/Blink Browsers */
     }
 
     ::-moz-selection {
-        background: #ffb7b7;
+        background: var(--color-five);
         /* Gecko Browsers */
     }
 
     input {
-        caret-color: red;
+        caret-color: var(--color-caret);
 
         font-size: 3rem;
         height: 4.5rem;
         outline: none;
         padding-left: 15px;
         padding-top: 3px;
-        background: #c5f0a4;
+        background: var(--color-two);
         border: none;
         padding-bottom: 5px;
         border-bottom: 4px solid gray;
@@ -131,14 +131,14 @@
         display: block;
         font-weight: 300;
         font-size: 100px;
-        color: #35495e;
+        color: var(--color-text);
         letter-spacing: 1px;
     }
 
     .subtitle {
         font-weight: 300;
         font-size: 42px;
-        color: #526488;
+        color: var(--color-light-text);
         word-spacing: 5px;
         padding-bottom: 15px;
     }

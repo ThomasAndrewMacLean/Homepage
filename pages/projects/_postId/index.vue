@@ -6,24 +6,31 @@
                 <span class="create-date">({{new Date(date.split(" ")[0]).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}})</span>
             </h1>
             <code>
-                <a class="sm-m link" :href="link" target="_blank">{{link}}</a>
+                <a class="sm-m link clear" :href="link" target="_blank">{{link}}</a>
             </code>
             <code>
-                <a class="sm-m link" :href="link_code" target="_blank">{{link_code}}</a>
+                <a class="sm-m link clear" :href="link_code" target="_blank">{{link_code}}</a>
             </code>
             <code>
-                <a class="sm-m link" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
+                <a class="sm-m link clear" v-if="link_code2" :href="link_code2" target="_blank">{{link_code2}}</a>
             </code>
 
 
-            <p class="sm-m link">{{ description }}</p>
+            <p class="sm-m clear">{{ description }}</p>
 
-            <p class="sm-m link">Techniques</p>
-            <ul class="link">
+            <p class="sm-m clear">Techniques</p>
+            <ul class="clear">
                 <li class="sm-m" v-for="t in techniques" :key="t">
                     {{t}}
                 </li>
             </ul>
+            <p class="clear">
+                <a @click="openJson">packagejson</a>
+                <code v-if="packagejsonOpen">
+                    {{ packagejson }}
+                </code>
+
+            </p>
         </section>
     </div>
 </template>
@@ -32,15 +39,21 @@
     // console.log(context.params);
 
     export default {
+        data() {
+            return {
+                packagejson: '',
+                packagejsonOpen: false
+            };
+        },
         asyncData(context) {
             return context.app.$storyapi
                 .get('cdn/stories/projects/' + context.params.postId, {
                     version: process.env.NODE_ENV == 'production' ? 'published' : 'draft'
                 })
                 .then(res => {
-                    console.log('res');
-                    console.log(res);
                     const blok = res.data.story.content;
+
+
                     return {
                         blok: blok,
                         image: blok.thumbnail,
@@ -60,9 +73,28 @@
             this.$storyblok.on('change', () => {
                 location.reload(true);
             });
+
         },
         methods: {
+            openJson() {
+                this.packagejsonOpen = !this.packagejsonOpen;
+                if (this.packagejson) return;
+                let repo = this.link_code.split('ThomasAndrewMacLean/')[1].split('/')[0];
+                try {
+                    if (window) {
+                        fetch(
+                            `https://raw.githubusercontent.com/ThomasAndrewMacLean/${repo}/master/package.json`
+                        ).then(
+                            x => {
+                                x.json().then(y => this.packagejson = y);
+                            });
+                    }
+                } catch (error) {
+                    console.log(error);
 
+                }
+
+            }
         }
     };
 
@@ -78,7 +110,7 @@
         font-size: 1rem;
     }
 
-    .link {
+    .clear {
         clear: both;
         float: left;
     }

@@ -28,6 +28,20 @@
 </script>
 
 <style>
+    a {
+        }
+
+    .link:hover {
+        
+        border-bottom: 2px solid var(--color-two);
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--color-four);
+        border-bottom: 2px solid var(--color-one);
+    }
+
     html {
         font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -38,7 +52,7 @@
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         box-sizing: border-box;
-        background: #faffb8;
+        background: var(--color-one);
     }
 
     *,
@@ -60,7 +74,7 @@
     }
 
     footer {
-        background: #c5f0a4;
+        background: var(--color-two);
         margin-top: 2rem;
         height: 4rem;
         width: 100vw;
