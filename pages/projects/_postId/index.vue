@@ -26,8 +26,10 @@
             </ul>
             <p class="clear">
                 <a @click="openJson">packagejson</a>
-                <code v-if="packagejsonOpen">
+                <code class="neg-margin-left" v-if="packagejsonOpen">
+                    <pre>
                     {{ packagejson }}
+                    </pre>
                 </code>
 
             </p>
@@ -101,6 +103,20 @@
 </script>
 
 <style scoped>
+    .neg-margin-left {
+        margin-left: -8rem;
+    }
+
+    pre {
+        background: var(--color-two);
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        display: block;
+        font-family: monospace;
+        white-space: pre;
+        margin: 1em 0px;
+    }
+
     h1 {
         padding: 3rem 0 1rem 2rem;
         margin-left: -1rem;
