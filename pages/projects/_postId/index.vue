@@ -28,6 +28,8 @@
                 <a @click="openJson">packagejson</a>
                 <code class="neg-margin-left" v-if="packagejsonOpen">
                     <pre>
+
+
                     {{ packagejson }}
                     </pre>
                 </code>
