@@ -8,7 +8,7 @@
             <code>
                 made by:
                 <a href="mailto:hello@thomasmaclean.be">thomas maclean</a>
-                <router-link class="emoji" to="Admin">🤖</router-link>
+                🤖
 
                 {{'© ' +new Date().getFullYear()}}
             </code>

@@ -24,16 +24,21 @@
                     {{t}}
                 </li>
             </ul>
-            <p class="clear">
-                <a @click="openJson">packagejson</a>
+            <p class="clear packagejsonWrap">
+                <a class="packagejsonTitle" @click="openJson">packagejson</a>
                 <code class="neg-margin-left" v-if="packagejsonOpen">
                     <pre>
-
-
                     {{ packagejson }}
                     </pre>
                 </code>
-
+            </p>
+            <p v-if="link_code2" class="clear packagejsonWrap">
+                <a class="packagejsonTitle" @click="openJson2">packagejson backend</a>
+                <code class="neg-margin-left" v-if="packagejson2Open">
+                    <pre>
+                    {{ packagejson2 }}
+                    </pre>
+                </code>
             </p>
         </section>
     </div>
@@ -46,7 +51,9 @@
         data() {
             return {
                 packagejson: '',
-                packagejsonOpen: false
+                packagejsonOpen: false,
+                packagejson2: '',
+                packagejson2Open: false
             };
         },
         asyncData(context) {
@@ -56,7 +63,6 @@
                 })
                 .then(res => {
                     const blok = res.data.story.content;
-
 
                     return {
                         blok: blok,
@@ -77,27 +83,43 @@
             this.$storyblok.on('change', () => {
                 location.reload(true);
             });
-
         },
         methods: {
             openJson() {
                 this.packagejsonOpen = !this.packagejsonOpen;
                 if (this.packagejson) return;
-                let repo = this.link_code.split('ThomasAndrewMacLean/')[1].split('/')[0];
+                let repo = this.link_code
+                    .split('ThomasAndrewMacLean/')[1]
+                    .split('/')[0];
                 try {
                     if (window) {
                         fetch(
                             `https://raw.githubusercontent.com/ThomasAndrewMacLean/${repo}/master/package.json`
-                        ).then(
-                            x => {
-                                x.json().then(y => this.packagejson = y);
-                            });
+                        ).then(x => {
+                            x.json().then(y => (this.packagejson = y));
+                        });
                     }
                 } catch (error) {
                     console.log(error);
-
                 }
-
+            },
+            openJson2() {
+                this.packagejson2Open = !this.packagejson2Open;
+                if (this.packagejson2) return;
+                let repo = this.link_code2
+                    .split('ThomasAndrewMacLean/')[1]
+                    .split('/')[0];
+                try {
+                    if (window) {
+                        fetch(
+                            `https://raw.githubusercontent.com/ThomasAndrewMacLean/${repo}/master/package.json`
+                        ).then(x => {
+                            x.json().then(y => (this.packagejson2 = y));
+                        });
+                    }
+                } catch (error) {
+                    console.log(error);
+                }
             }
         }
     };
@@ -157,6 +179,21 @@
     #post {
         width: 100vw;
         /* overflow: hidden; */
+    }
+
+    .packagejsonWrap {
+        min-height: 2rem;
+
+    }
+
+    .packagejsonTitle {
+        margin: 1rem;
+        cursor: pointer;
+        line-height: 2rem;
+    }
+
+    .packagejsonTitle:hover::after {
+        content: ' 📦'
     }
 
 </style>
