@@ -16,8 +16,7 @@
         "generate": "nuxt generate",
         "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
         "precommit": "npm run lint",
-        "deploy": "nuxt generate && surge ./dist && rimraf ./dist",
-        "prepush": "yarn deploy"
+        "deploy": "nuxt generate && surge ./dist && rimraf ./dist"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.0.0",
@@ -31,7 +30,6 @@
         "eslint-loader": "^2.0.0",
         "eslint-plugin-html": "^4.0.5",
         "eslint-plugin-vue": "^4.0.0",
-        "husky": "^0.14.3",
         "rimraf": "^2.6.2",
         "surge": "^0.20.1"
     }

@@ -131,6 +131,10 @@
         margin-left: -8rem;
     }
 
+    a {
+        color: var(--color-three);
+    }
+
     pre {
         background: var(--color-two);
         word-wrap: break-word;
