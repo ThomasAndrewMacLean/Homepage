@@ -8,5 +8,4 @@ script:
   - yarn generate
 deploy:
   provider: surge
-  project: ./dist
-  domain: thomasmaclean.be
+  project: ./dist/
