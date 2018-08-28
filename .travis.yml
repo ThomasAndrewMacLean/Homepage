@@ -1,5 +1,12 @@
+language: node_js
+node_js:
+ - "7.4.0"
+before_script:
+  - yarn install
 script:
-  yarn generate
+  - yarn test
+script:
+  - yarn generate
 deploy:
-  provider: surge
-  project: ./static
+  - provider: surge
+  - project: ./static
