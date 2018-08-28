@@ -11,4 +11,4 @@ script:
 deploy:
   provider: surge
   project: ./dist
-  domain: example.surge.sh  
+  domain: thomasmaclean.be
