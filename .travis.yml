@@ -9,3 +9,4 @@ script:
 deploy:
   provider: surge
   project: ./dist/
+  skip_cleanup: true
