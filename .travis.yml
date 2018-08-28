@@ -1,0 +1,5 @@
+script:
+  yarn generate
+deploy:
+  provider: surge
+  project: ./static
