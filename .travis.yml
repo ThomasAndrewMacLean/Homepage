@@ -1,13 +1,14 @@
 
 language: node_js
 node_js:
-- node
+node
 before_script:
-  - yarn install
+  yarn install
 script:
-  - yarn test
+  yarn test
 script:
-  - yarn generate
+  yarn generate
 deploy:
-  - provider: surge
-  - project: ./dist
+  provider: surge
+  project: ./dist
+  domain: example.surge.sh  
