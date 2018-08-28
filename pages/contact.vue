@@ -3,7 +3,8 @@
         <form @submit.prevent="contact">
             <input type="email" placeholder="email" v-model="email" autofocus>
             <textarea placeholder="hi..." v-model="contactText" cols="30" rows="5"></textarea>
-            <input type="submit" value="send"> </form>
+            <input type="submit" value="send" :disabled="!email || !contactText">
+        </form>
 
     </section>
 </template>
@@ -19,7 +20,8 @@
         },
         methods: {
             contact() {
-                console.log(this.text);
+                this.contactText = '';
+                this.email = '';
                 fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
                     method: 'POST',
                     mode: 'no-cors',
@@ -32,12 +34,10 @@
                         contactText: this.contactText
                     })
                 }).then(x => {
-                    this.contactText = '';
-                    this.email = '';
+
                 });
 
 
-                this.text = '';
             }
         }
     };
@@ -84,13 +84,6 @@
     form {
         flex-direction: column;
         justify-content: space-evenly;
-    }
-
-    a.link {
-        border: 1px solid var(--color-two);
-        color: var(--color-three);
-        padding: 1rem;
-        margin-top: 1rem;
     }
 
 </style>
