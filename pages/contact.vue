@@ -82,6 +82,7 @@
     }
 
     form {
+        max-width: 500px;
         flex-direction: column;
         justify-content: space-evenly;
     }
