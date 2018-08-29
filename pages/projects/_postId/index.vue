@@ -3,7 +3,8 @@
         <div class="post-thumbnail" :style="{backgroundImage: 'url(' + image + ')'}"></div>
         <section class="post-content">
             <h1>{{ title }}
-                <span class="create-date">({{new Date(date.split(" ")[0]).toLocaleDateString('en-GB', { year: 'numeric', month: 'long' })}})</span>
+                <span class="create-date">({{new Date(date.split(" ")[0]).toLocaleDateString('en-GB', { year:
+                    'numeric', month: 'long' })}})</span>
             </h1>
             <code>
                 <a class="sm-m link clear" :href="link" target="_blank">{{link}}</a>

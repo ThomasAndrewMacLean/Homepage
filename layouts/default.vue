@@ -1,6 +1,6 @@
 <template>
     <div id="stage" class="layout">
-        <the-header/>
+        <the-header />
 
         <nuxt class="nuxt" />
 
@@ -28,11 +28,12 @@
 </script>
 
 <style>
-    a {
-        }
+    a.link {
+        color: var(--color-three);
+    }
 
     .link:hover {
-        
+
         border-bottom: 2px solid var(--color-two);
     }
 
@@ -44,7 +45,7 @@
 
     html {
         font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-        'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         font-size: 16px;
         word-spacing: 1px;
         -ms-text-size-adjust: 100%;
@@ -103,6 +104,7 @@
         footer {
             height: 3rem;
         }
+
         .nuxt {
             min-height: calc(100vh - 8rem);
         }
