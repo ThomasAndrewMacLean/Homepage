@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <form @submit.prevent="contact">
-            <input type="email" placeholder="email" v-model="email" autofocus>
+            <input type="email" placeholder="email@📬.be" v-model="email" autofocus>
             <textarea placeholder="hi..." v-model="contactText" cols="30" rows="5"></textarea>
             <input type="submit" value="send" :disabled="!email || !contactText">
         </form>
@@ -46,8 +46,6 @@
 
 <style>
     section {
-
-
         color: var(--color-text);
     }
 
