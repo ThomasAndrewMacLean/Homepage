@@ -36,7 +36,13 @@ module.exports = {
             href:'/colours.css'
         }]
     },
-
+sitemap: {
+      path: '/sitemap.xml',
+      hostname: 'https://thomasmaclean.be',
+      generate: true, // Enable me when using nuxt generate
+      exclude: [],
+      routes: []
+  },
     /*
    ** Customize the progress-bar color
    */
