@@ -1,5 +1,7 @@
 # project-blog
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ThomasAndrewMacLean/project-blog.svg)](https://greenkeeper.io/)
+
 > nuxt blog
 
 ## Build Setup
