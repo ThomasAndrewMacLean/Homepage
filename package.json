@@ -19,11 +19,11 @@
         "deploy": "nuxt generate && surge ./dist && rimraf ./dist"
     },
     "dependencies": {
-        "@nuxtjs/axios": "^5.0.0",
         "nuxt": "^1.0.0",
         "storyblok-nuxt": "^0.0.9"
     },
     "devDependencies": {
+        "@nuxtjs/google-analytics": "^2.0.2",
         "@nuxtjs/sitemap": "^0.1.1",
         "babel-eslint": "^9.0.0",
         "cross-env": "^5.0.1",
