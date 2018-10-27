@@ -8,49 +8,67 @@ module.exports = {
    */
     head: {
         title: 'Thomas MacLean',
-        meta: [{
-            charset: 'utf-8'
-        },
-        {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1'
-        },
-        {
-            hid: 'description',
-            name: 'description',
-            content: pkg.description
-        },
-        {
-            hid: 'author',
-            name: 'author',
-            content: 'Thomas MacLean'
-        },
-        {
-            name:'google-site-verification',
-            content:'bI9hWQ4QqE1bNeSREWXaybhSEIMULuhW2ArIiyVcUdA'
-        }
+        meta: [
+            {
+                charset: 'utf-8'
+            },
+            {
+                name: 'viewport',
+                content: 'width=device-width, initial-scale=1'
+            },
+            {
+                hid: 'description',
+                name: 'description',
+                content: pkg.description
+            },
+            {
+                hid: 'author',
+                name: 'author',
+                content: 'Thomas MacLean'
+            },
+            {
+                name: 'google-site-verification',
+                content: 'bI9hWQ4QqE1bNeSREWXaybhSEIMULuhW2ArIiyVcUdA'
+            }
         ],
-        link: [{
-            rel: 'icon',
-            type: 'image/x-icon',
-            href: '/favicon.ico'
-        },
-        {
-            rel:'stylesheet',
-            type:'text/css',
-            href:'/colours.css'
-        },
-        {
-            rel:'canonical',
-            href:'https://thomasmaclean.be/'
-        }]
+        link: [
+            {
+                rel: 'icon',
+                type: 'image/x-icon',
+                href: '/favicon.ico'
+            },
+            {
+                rel: 'stylesheet',
+                type: 'text/css',
+                href: '/colours.css'
+            },
+            {
+                rel: 'canonical',
+                href: 'https://thomasmaclean.be/'
+            }
+        ]
     },
     sitemap: {
         path: '/sitemap.xml',
         hostname: 'https://thomasmaclean.be',
         generate: true, // Enable me when using nuxt generate
         exclude: [],
-        routes: []
+        routes: [
+            '/projects/comicstore',
+            '/projects/learn2type',
+            '/projects/gitbot',
+            '/projects/cv',
+            '/projects/endTraining',
+            '/projects/chess',
+            '/projects/orderbook',
+            '/projects/daniel',
+            '/projects/sterderzee',
+            '/projects/particle',
+            '/projects/this-site',
+            '/projects/to2do',
+            '/projects/weather',
+            '/projects/mine'
+        ]
     },
     /*
    ** Customize the progress-bar color
@@ -67,38 +85,39 @@ module.exports = {
     /*
    ** Plugins to load before mounting the App
    */
-    plugins: [
-       
-    ],
+    plugins: [],
 
     /*
    ** Nuxt.js modules
    */
     modules: [
-        ['storyblok-nuxt', {
-            accessToken: 'rnWt2D5baTkDi6DgLKNpAAtt',
-            cacheProvider: 'memory'
-        }],
         [
-            '@nuxtjs/sitemap'
+            'storyblok-nuxt',
+            {
+                accessToken: 'rnWt2D5baTkDi6DgLKNpAAtt',
+                cacheProvider: 'memory'
+            }
         ],
-        ['@nuxtjs/google-analytics', {
-            id: 'UA-110018468-7'
-        }]
-           
+        ['@nuxtjs/sitemap'],
+        [
+            '@nuxtjs/google-analytics',
+            {
+                id: 'UA-110018468-7'
+            }
+        ]
     ],
     /*
    ** Axios module configuration
    */
     axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+        // See https://github.com/nuxt-community/axios-module#options
     },
 
     /*
    ** Build configuration
    */
     build: {
-    /*
+        /*
      ** You can extend webpack config here
      */
         extend(config, ctx) {
