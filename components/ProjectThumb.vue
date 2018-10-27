@@ -48,11 +48,11 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
+        filter: grayscale(85%);
     }
 
     .preview-photo:hover {
-        -webkit-filter: blur(1px);
-        filter: blur(1px);
+        filter: grayscale(0);
         box-shadow: 0px 0px 20px 0px var(--color-text);
     }
 
