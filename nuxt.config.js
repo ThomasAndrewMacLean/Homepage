@@ -21,6 +21,11 @@ module.exports = {
             content: pkg.description
         },
         {
+            hid: 'author',
+            name: 'author',
+            content: 'Thomas MacLean'
+        },
+        {
             name:'google-site-verification',
             content:'bI9hWQ4QqE1bNeSREWXaybhSEIMULuhW2ArIiyVcUdA'
         }
@@ -34,6 +39,10 @@ module.exports = {
             rel:'stylesheet',
             type:'text/css',
             href:'/colours.css'
+        },
+        {
+            rel:'canonical',
+            href:'https://thomasmaclean.be/'
         }]
     },
     sitemap: {
