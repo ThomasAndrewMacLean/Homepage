@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/ThomasAndrewMacLean/project-blog.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/ThomasAndrewMacLean/project-blog.svg?branch=master)](https://travis-ci.org/ThomasAndrewMacLean/project-blog)
 
-> nuxt blog
+> nuxt blog for personal site
 
 ## Build Setup
 
