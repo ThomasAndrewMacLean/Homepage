@@ -4,9 +4,12 @@ module.exports = {
     mode: 'universal',
 
     /*
-   ** Headers of the page
-   */
+     ** Headers of the page
+     */
     head: {
+        htmlAttrs: {
+            lang: 'en'
+        },
         title: 'Thomas MacLean',
         meta: [
             {
@@ -71,25 +74,25 @@ module.exports = {
         ]
     },
     /*
-   ** Customize the progress-bar color
-   */
+     ** Customize the progress-bar color
+     */
     loading: {
         color: '#FFFFFF'
     },
 
     /*
-   ** Global CSS
-   */
+     ** Global CSS
+     */
     css: [],
 
     /*
-   ** Plugins to load before mounting the App
-   */
+     ** Plugins to load before mounting the App
+     */
     plugins: [],
 
     /*
-   ** Nuxt.js modules
-   */
+     ** Nuxt.js modules
+     */
     modules: [
         [
             'storyblok-nuxt',
@@ -107,19 +110,19 @@ module.exports = {
         ]
     ],
     /*
-   ** Axios module configuration
-   */
+     ** Axios module configuration
+     */
     axios: {
         // See https://github.com/nuxt-community/axios-module#options
     },
 
     /*
-   ** Build configuration
-   */
+     ** Build configuration
+     */
     build: {
         /*
-     ** You can extend webpack config here
-     */
+         ** You can extend webpack config here
+         */
         extend(config, ctx) {
             // Run ESLint on save
             if (ctx.isDev && ctx.isClient) {
