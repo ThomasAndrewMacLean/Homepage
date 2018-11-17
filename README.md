@@ -1,12 +1,13 @@
 # project-blog
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ThomasAndrewMacLean/project-blog.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/ThomasAndrewMacLean/project-blog.svg?branch=master)](https://travis-ci.org/ThomasAndrewMacLean/project-blog)
 
 > nuxt blog
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
