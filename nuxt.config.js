@@ -32,6 +32,9 @@ module.exports = {
             {
                 name: 'google-site-verification',
                 content: 'bI9hWQ4QqE1bNeSREWXaybhSEIMULuhW2ArIiyVcUdA'
+            },     {
+                name: 'theme-color',
+                content: '#6a9c78'
             }
         ],
         link: [
