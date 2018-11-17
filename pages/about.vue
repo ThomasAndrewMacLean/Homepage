@@ -26,7 +26,7 @@
                     <a href="https://thomasandrewmaclean.github.io/" class="link">CV</a>
                 </li>
                 <li>
-                    <a class="link" href="www.linkedin.com/in/thomas-andrew-maclean">linkedin</a>
+                    <a class="link" href="http://www.linkedin.com/in/thomas-andrew-maclean">linkedin</a>
                 </li>
 
             </ul>
