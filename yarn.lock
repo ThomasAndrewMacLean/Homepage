@@ -3521,6 +3521,13 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+"lighthouse-ci@https://github.com/ebidel/lighthouse-ci":
+  version "0.1.0"
+  resolved "https://github.com/ebidel/lighthouse-ci#b0e8f0d503ce6cb630d599d3e309d1b804fb5d20"
+  dependencies:
+    minimist "^1.2.0"
+    node-fetch "^2.2.0"
+
 load-json-file@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
@@ -3927,6 +3934,10 @@ node-fetch@1.6.3:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-fetch@^2.2.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
 
 node-libs-browser@^2.0.0:
   version "2.1.0"
