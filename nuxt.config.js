@@ -65,7 +65,7 @@ module.exports = {
             '/projects/learn2type',
             '/projects/gitbot',
             '/projects/cv',
-
+            
             '/projects/endTraining',
             '/projects/chess',
             '/projects/orderbook',
