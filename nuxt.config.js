@@ -1,5 +1,5 @@
 const pkg = require('./package');
-import importedRoutes from './sitemaproutes';
+const importedRoutes = require('./sitemaproutes');
 
 module.exports = {
     mode: 'universal',
