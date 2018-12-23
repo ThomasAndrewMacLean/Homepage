@@ -1,4 +1,5 @@
 const pkg = require('./package');
+const importedRoutes = require('./sitemaproutes');
 
 module.exports = {
     mode: 'universal',
@@ -60,23 +61,7 @@ module.exports = {
         hostname: 'https://thomasmaclean.be',
         generate: true, // Enable me when using nuxt generate
         exclude: [],
-        routes: [
-            '/projects/comicstore',
-            '/projects/learn2type',
-            '/projects/gitbot',
-            '/projects/cv',
-            '/projects/endTraining',
-            '/projects/chess',
-            '/projects/orderbook',
-            '/projects/daniel',
-            '/projects/sterderzee',
-            '/projects/particle',
-            '/projects/this-site',
-            '/projects/to2do',
-            '/projects/weather',
-            '/projects/mine',
-            '/projects/watstaateropmijnepas'
-        ]
+        routes: importedRoutes
     },
     /*
      ** Customize the progress-bar color
