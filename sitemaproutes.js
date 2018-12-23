@@ -1,4 +1,4 @@
-const routes = [
+module.exports = [
     '/projects/comicstore',
     '/projects/learn2type',
     '/projects/gitbot',
@@ -17,5 +17,3 @@ const routes = [
     '/projects/watstaateropmijnepas',
     '/projects/kiss-counter'
 ];
-
-export default routes;
