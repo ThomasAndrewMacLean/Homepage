@@ -1,1 +1,1 @@
-my new file contents
+module.exports = ["projects/kiss-counter","projects/watstaateropmijnepas","projects/helderplaybook","projects/comicstore","projects/cv","projects/learn2type","projects/endtraining","projects/chess","projects/orderbook","projects/daniel","projects/sterderzee","projects/particle","projects/gitbot","projects/this-site","projects/to2do","projects/mine","projects/weather"]
