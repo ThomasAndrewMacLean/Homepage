@@ -98,7 +98,7 @@
         width: 1em;
         height: 1em;
         margin-top: 0.2em;
-        background: var(--color-one);
+        background: white;
     }
 
 </style>
