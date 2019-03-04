@@ -20,8 +20,7 @@
         },
         methods: {
             contact() {
-                this.contactText = '';
-                this.email = '';
+                
                 fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
                     method: 'POST',
                     mode: 'no-cors',
@@ -34,7 +33,8 @@
                         contactText: this.contactText
                     })
                 }).then(x => {
-
+this.contactText = '';
+                this.email = '';
                 });
 
 
