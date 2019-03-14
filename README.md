@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/ThomasAndrewMacLean/project-blog.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/ThomasAndrewMacLean/project-blog.svg?branch=master)](https://travis-ci.org/ThomasAndrewMacLean/project-blog)
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m781415234-bf216a778aca4aaac17a5718.svg)
-
+![GitHub](https://img.shields.io/github/license/ThomasAndrewMacLean/project-blog.svg)
 > nuxt blog for personal site
 
 ## Build Setup
