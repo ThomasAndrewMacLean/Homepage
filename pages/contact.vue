@@ -1,9 +1,9 @@
 <template>
     <section class="container">
         <form @submit.prevent="contact">
-            <input type="email" placeholder="email@📬.be" v-model="email" autofocus>
+            <input type="email" placeholder="email@📬.be" v-model="email" autofocus required>
             <textarea placeholder="hi..." v-model="contactText" cols="30" rows="5"></textarea>
-            <input type="submit" value="send" :disabled="!email || !contactText">
+            <input type="submit" value="send" :disabled="!email || !contactText"  required>
         </form>
 
     </section>
@@ -20,8 +20,7 @@
         },
         methods: {
             contact() {
-                this.contactText = '';
-                this.email = '';
+                
                 fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
                     method: 'POST',
                     mode: 'no-cors',
@@ -34,7 +33,8 @@
                         contactText: this.contactText
                     })
                 }).then(x => {
-
+this.contactText = '';
+                this.email = '';
                 });
 
 
