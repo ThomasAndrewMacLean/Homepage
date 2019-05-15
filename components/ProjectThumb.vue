@@ -1,6 +1,6 @@
 <template>
     <div class="post-preview">
-        <nuxt-link :to="id">
+        <nuxt-link :to="'../projects/' + id">
             <h1 class="preview-title">{{ title }}</h1>
             <img class="preview-photo" :src="'https:' + thumbnailImage" alt="">
             <p class="preview-descr block-with-text">{{ excerpt }}</p>
