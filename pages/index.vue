@@ -62,5 +62,8 @@ const typewriter = new Typewriter(skilzz, {
         border-bottom: 2px solid lightcoral; */
 
     }
+    
+    #type-writer{
+        display: inline-block;}
 
 </style>
