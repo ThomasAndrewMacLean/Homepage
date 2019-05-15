@@ -45,44 +45,5 @@
 </script>
 
 <style>
-    section {
-        color: var(--color-text);
-    }
-
-
-    textarea {
-        width: 90vw;
-        max-width: 500px;
-        padding: 1rem;
-        font-size: 1rem;
-        color: var(--color-text);
-
-    }
-
-    input {
-        width: 90vw;
-        max-width: 500px;
-        margin: 1rem 0;
-        padding: 1rem;
-        font-size: 1rem;
-        color: var(--color-text);
-
-
-    }
-
-    input[type="submit"] {
-        background: var(--color-two);
-    }
-
-    .container {
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    form {
-        max-width: 500px;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
 
 </style>
