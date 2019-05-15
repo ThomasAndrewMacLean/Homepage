@@ -36,7 +36,7 @@ module.exports = {
             },
             {
                 name: 'theme-color',
-                content: '#6a9c78'
+                content: 'lightseagreen'
             }
         ],
         link: [
