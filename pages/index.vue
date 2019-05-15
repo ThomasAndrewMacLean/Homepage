@@ -1,6 +1,6 @@
 <template>
     <section @click="clicked = ! clicked" :class="{ clicked: clicked }" class="container">
-        <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build <p id="type-writer"></p></h1>
+        <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build <p id="type-writer" contenteditable="true"></p></h1>
     </section>
 </template>
 
@@ -18,7 +18,7 @@ import Typewriter from 'typewriter-effect/dist/core';
 const skilzz = document.getElementById('type-writer');
 
 const typewriter = new Typewriter(skilzz, {
-    strings: ['websites', 'mailing-lists', 'excel add-ons', 'webapplications', 'slackbots', "api's", "... what can I build for you?", ],
+    strings: ['websites', 'cloud solutions', 'excel add-ons', 'webapplications', 'slackbots', "api's", "... what can I build for you?", ],
   autoStart: true,
 });
         }
