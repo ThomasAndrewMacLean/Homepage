@@ -1,10 +1,11 @@
 <template>
     <section @click="clicked = ! clicked" :class="{ clicked: clicked }" class="container">
-        <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build websites</h1>
+        <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build <div id="type-writer"></div></h1>
     </section>
 </template>
 
 <script>
+import Typewriter from 'typewriter-effect/dist/core';
     export default {
 
         data() {
@@ -13,8 +14,13 @@
                 clicked: false
             };
         },
-        methods: {
+        mounted() {
+const skilzz = document.getElementById('type-writer');
 
+const typewriter = new Typewriter(skilzz, {
+    strings: ['Hello', 'World'],
+  autoStart: true,
+});
         }
     };
 
