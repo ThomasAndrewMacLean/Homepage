@@ -27,3 +27,7 @@ $ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Stuff used
+
+https://www.npmjs.com/package/typewriter-effect
