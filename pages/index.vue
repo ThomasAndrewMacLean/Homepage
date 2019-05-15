@@ -64,6 +64,7 @@ const typewriter = new Typewriter(skilzz, {
     }
     
     #type-writer{
+        position: fixed;
         display: inline-block;}
 
 </style>
