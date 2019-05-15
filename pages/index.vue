@@ -27,6 +27,8 @@
         left: 0;
         background: lightseagreen;
         color: whitesmoke;
+        transition: all 0.5s ease;
+
     }
 
     a {
