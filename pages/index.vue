@@ -18,9 +18,8 @@ import Typewriter from 'typewriter-effect/dist/core';
 const skilzz = document.getElementById('type-writer');
 
 const typewriter = new Typewriter(skilzz, {
-    strings: ['websites', 'mailing-lists', 'excel add-ons', 'webapplications', 'slackbots', "api's"],
+    strings: ['websites', 'mailing-lists', 'excel add-ons', 'webapplications', 'slackbots', "api's", "... what can I build for you?", ],
   autoStart: true,
-  loop: true
 });
         }
     };
