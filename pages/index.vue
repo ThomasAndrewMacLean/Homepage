@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section @click="clicked = ! clicked" :class="{ clicked: clicked }" class="container">
         <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build websites</h1>
     </section>
 </template>
@@ -10,7 +10,7 @@
         data() {
             return {
                 projects: [],
-                searchInput: ''
+                clicked: false
             };
         },
         methods: {
@@ -29,6 +29,10 @@
         color: whitesmoke;
         transition: all 0.5s ease;
 
+    }
+    
+    .clicked {
+        filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
     }
 
     a {
