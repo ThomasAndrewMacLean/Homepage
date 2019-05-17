@@ -4,7 +4,11 @@
       Hi, I'm
       <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build
       <no-ssr>
-        <vue-typer text="watermelon"></vue-typer>
+        <vue-typer
+          :repeat="0"
+          :erase-delay="250"
+          :text="['websites', 'cloud solutions', 'excel add-ons', 'webapplications', 'slackbots', 'api\'s', '... what can I build for you?', ]"
+        ></vue-typer>
       </no-ssr>
     </h1>
   </section>
@@ -68,19 +72,10 @@ h1 {
     padding: 2rem;
 }
 
-a::after {
-    /* content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-
-        width: 100%;
-        border-bottom: 2px solid lightcoral; */
-}
-
-#type-writer {
+.vue-typer {
     position: fixed;
     display: inline-block;
+    color: white;
 }
+
 </style>
