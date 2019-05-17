@@ -1,58 +1,70 @@
 <template>
-    <section @click="clicked = ! clicked" :class="{ clicked: clicked }" class="container">
-        <h1>Hi, I'm <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build <p id="type-writer" contenteditable="true"></p></h1>
-    </section>
+  <section @click="clicked = ! clicked" :class="{ clicked: clicked }" class="container">
+    <h1>
+      Hi, I'm
+      <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build
+      <vue-typer text="watermelon" @completed="onComplete"></vue-typer>
+    </h1>
+  </section>
 </template>
 
 <script>
-import Typewriter from 'typewriter-effect/dist/core';
-    export default {
+import { VueTyper } from 'vue-typer';
 
-        data() {
-            return {
-                projects: [],
-                clicked: false
-            };
-        },
-        mounted() {
-const skilzz = document.getElementById('type-writer');
-
-const typewriter = new Typewriter(skilzz, {
-    strings: ['websites', 'cloud solutions', 'excel add-ons', 'webapplications', 'slackbots', "api's", "... what can I build for you?", ],
-  autoStart: true,
-});
-        }
-    };
-
+export default {
+    data() {
+        return {
+            projects: [],
+            clicked: false
+        };
+    },
+    // mounted() {
+    //     const skilzz = document.getElementById('type-writer');
+    //     const typewriter = new Typewriter(skilzz, {
+    //         strings: [
+    //             'websites',
+    //             'cloud solutions',
+    //             'excel add-ons',
+    //             'webapplications',
+    //             'slackbots',
+    //             "api's",
+    //             '... what can I build for you?'
+    //         ],
+    //         autoStart: true
+    //     });
+    // },
+    components: {
+        VueTyper
+    }
+};
 </script>
 
 <style scoped>
-    .container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: lightseagreen;
-        color: whitesmoke;
-        transition: all 0.5s ease;
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: lightseagreen;
+    color: whitesmoke;
+    transition: all 0.5s ease;
+}
 
-    }
-    
-    .clicked {
-        filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
-    }
+.clicked {
+    filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+}
 
-    a {
-        position: relative;
-        text-decoration-style: wavy;
-        text-decoration-color: lightcoral;
-    }
+a {
+    position: relative;
+    text-decoration-style: wavy;
+    text-decoration-color: lightcoral;
+}
 
-    h1 {
-        padding: 2rem;
-    }
+h1 {
+    padding: 2rem;
+}
 
-    a::after {
-        /* content: "";
+a::after {
+    /* content: "";
         position: absolute;
         left: 0;
         bottom: 0;
@@ -60,11 +72,10 @@ const typewriter = new Typewriter(skilzz, {
 
         width: 100%;
         border-bottom: 2px solid lightcoral; */
+}
 
-    }
-    
-    #type-writer{
-        position: fixed;
-        display: inline-block;}
-
+#type-writer {
+    position: fixed;
+    display: inline-block;
+}
 </style>
