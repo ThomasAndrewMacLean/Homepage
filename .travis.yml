@@ -9,6 +9,8 @@ deploy:
     provider: surge
     project: './dist/'
     skip_cleanup: true
+    on:
+        branch: master
 after_success:
     - npm run lh -- https://thomasmaclean.be
 notifications:
