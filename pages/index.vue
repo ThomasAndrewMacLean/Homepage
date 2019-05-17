@@ -3,13 +3,18 @@
     <h1>
       Hi, I'm
       <a href="mailto:hello@thomasmaclean.be?subject=Hi">Thomas</a> and I build
-      <vue-typer text="watermelon" @completed="onComplete"></vue-typer>
+      <no-ssr>
+        <vue-typer text="watermelon"></vue-typer>
+      </no-ssr>
     </h1>
   </section>
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer';
+if (process.browser) {
+    var VueTyper = require('vue-typer').VueTyper;
+}
+// import { VueTyper } from 'vue-typer';
 
 export default {
     data() {
