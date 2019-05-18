@@ -103,7 +103,7 @@
                 email: '',
                 contactText: '',
                 skillz: ['javascript', 'AWS', 'emailoctopus', 'react', 'vue', 'express.js', 'socket.IO', 'angular',
-                    'sass, less', 'webpack/rollup/parcel', 'git',
+                    'sass', 'less', 'webpack', 'rollup', 'parcel', 'git',
                     'node', 'jest', 'CI/CD', 'mongo-DB', 'firebase', 'postSQL', 'lambda functions', 'unit testing',
                     'api\'s', 'excel office.js',
                     'google-sheets api', 'twitter api', 'slack api', 'bulmaCSS', 'bootstrap', 'travis'
