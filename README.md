@@ -33,3 +33,6 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 https://cngu.github.io/vue-typer/
 https://nostalgic-css.github.io/NES.css/#
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal
+https://github.com/GoogleChrome/dialog-polyfill
+
+https://blog.logrocket.com/advanced-effects-with-css-background-blend-modes-4b750198522a

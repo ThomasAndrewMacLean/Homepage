@@ -47,12 +47,12 @@
                         <a class="close-btn"> <i class="nes-icon close is-small"
                                 onclick="document.getElementById('dialog-contact').close();"></i></a>
                         <div class="nes-field">
-                            <label for="email">Your email</label>
+                            <label for="email">Your email:</label>
                             <input autocomplete="email" type="email" v-model="email" id="email_field" class="nes-input"
                                 required>
                         </div>
 
-                        <label for="textarea_field">Textarea</label>
+                        <label for="textarea_field">How can i help:</label>
                         <textarea autocomplete="off" v-model="contactText" id="textarea_field" class="nes-textarea"
                             required></textarea>
 
