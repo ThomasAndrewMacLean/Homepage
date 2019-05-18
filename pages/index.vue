@@ -202,7 +202,14 @@
         top: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(purple 10%, lightseagreen 80%);
+        background:
+            radial-gradient(rgba(0, 255, 0, .1),
+                rgba(229, 255, 0, 0.452)),
+            repeating-linear-gradient(transparent 0,
+                rgba(0, 0, 0, .1) 4px,
+                transparent 8px),
+
+            linear-gradient(purple 10%, lightseagreen 80%);
         /* lightseagreen; */
         color: whitesmoke;
         transition: all 0.5s ease;
