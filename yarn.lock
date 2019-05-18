@@ -3914,6 +3914,10 @@ neo-async@^2.5.0:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.1.tgz#acb909e327b1e87ec9ef15f41b8a269512ad41ee"
 
+nes.css@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/nes.css/-/nes.css-2.1.1.tgz#04709eb87576a813ad8031d92d2e3fe940ecd0c6"
+
 netrc@0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/netrc/-/netrc-0.1.4.tgz#6be94fcaca8d77ade0a9670dc460914c94472444"

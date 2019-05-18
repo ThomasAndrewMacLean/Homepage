@@ -1,7 +1,7 @@
 {
     "name": "project-blog",
     "version": "1.0.0",
-    "description": "Thomas MacLean Coding Overview of all my Sites and Side projects",
+    "description": "Thomas MacLean, I build and create things.",
     "author": "ThomasAndrewMacLean",
     "private": true,
     "config": {
@@ -14,11 +14,12 @@
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate",
-        "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+        "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
         "precommit": "npm run lint",
         "deploy": "nuxt generate && surge ./dist && rimraf ./dist"
     },
     "dependencies": {
+        "nes.css": "^2.1.1",
         "nuxt": "^1.0.0",
         "storyblok-nuxt": "^0.0.9",
         "vue-typer": "^1.2.0"

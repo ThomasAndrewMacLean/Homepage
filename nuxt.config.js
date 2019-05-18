@@ -53,6 +53,10 @@ module.exports = {
             {
                 rel: 'canonical',
                 href: 'https://thomasmaclean.be/'
+            },
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css?family=Press+Start+2P'
             }
         ]
     },
