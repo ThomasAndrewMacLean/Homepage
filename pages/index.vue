@@ -7,7 +7,7 @@
                 <br />
                 <no-ssr placeholder="...">
                     <vue-typer :repeat="0" :erase-delay="250"
-                        :text="['websites', 'cloud solutions', 'excel add-ons', 'webapplications', 'slackbots', 'api\'s', '...', 'what can I build for you?', ]">
+                        :text="['websites', 'cloud solutions', 'excel add-ons', 'web applications', 'slackbots', 'api\'s', '...', 'what can I build for you?', ]">
                     </vue-typer>
                 </no-ssr>
             </h1>
