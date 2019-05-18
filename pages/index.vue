@@ -181,7 +181,7 @@
     }
 
     footer {
-        background: lightseagreen;
+        background: initial;
         position: absolute;
         bottom: 0;
         display: flex;
@@ -202,7 +202,8 @@
         top: 0;
         bottom: 0;
         left: 0;
-        background: lightseagreen;
+        background: linear-gradient(purple 10%, lightseagreen 80%);
+        /* lightseagreen; */
         color: whitesmoke;
         transition: all 0.5s ease;
     }
