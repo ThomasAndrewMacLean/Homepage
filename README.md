@@ -30,4 +30,6 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 
 ## Stuff used
 
-https://www.npmjs.com/package/typewriter-effect
+https://cngu.github.io/vue-typer/
+https://nostalgic-css.github.io/NES.css/#
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal

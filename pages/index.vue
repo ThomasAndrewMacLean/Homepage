@@ -17,17 +17,17 @@
                     Contact
                 </button>
                 <dialog class="nes-dialog" id="dialog-default">
-                    <form method="dialog">
+                    <form method="dialog" @submit.prevent="contact">
                         <p class="title">Let's build something:</p>
                         <a id="close-btn"> <i class="nes-icon close is-small"
                                 onclick="document.getElementById('dialog-default').close();"></i></a>
                         <div class="nes-field">
                             <label for="name_field">Your email</label>
-                            <input type="text" id="name_field" class="nes-input" required>
+                            <input type="email" v-model="email" id="name_field" class="nes-input" required>
                         </div>
 
                         <label for="textarea_field">Textarea</label>
-                        <textarea id="textarea_field" class="nes-textarea" required></textarea>
+                        <textarea v-model="contactText" id="textarea_field" class="nes-textarea" required></textarea>
 
                         <menu>
                             <button onclick="document.getElementById('dialog-default').close();" type="reset"
@@ -73,11 +73,38 @@
                 projects: [],
                 clicked: false,
                 loaded: false,
-                showModal: false
+                showModal: false,
+                email: '',
+                contactText: ''
             };
         },
         components: {
             VueTyper
+        },
+        methods: {
+            contact() {
+
+                const body = JSON.stringify({
+                    email: this.email,
+                    contactText: this.contactText
+                });
+
+                this.email = '';
+                this.contactText = '';
+                document.getElementById('dialog-default').close();
+
+                fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body
+                });
+
+
+            }
         },
         mounted() {
 
