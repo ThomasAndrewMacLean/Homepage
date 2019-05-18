@@ -1,8 +1,8 @@
 <template>
     <section class="homepage">
         <div class="hide homepage-wrapper" :class="{ loaded:loaded }">
-            <h1 class="half-height">
-                Hi, I'm Thomas, and I build
+            <h1 class="top-text">
+                Hi, I'm Thomas, and I build things:
 
                 <br />
                 <no-ssr placeholder="...">
@@ -11,26 +11,53 @@
                     </vue-typer>
                 </no-ssr>
             </h1>
-            <section>
+
+            <section class="button-wrapper">
                 <button type="button" class="nes-btn is-primary"
-                    onclick="document.getElementById('dialog-default').showModal();">
+                    onclick="document.getElementById('dialog-contact').showModal();">
                     Contact
                 </button>
-                <dialog class="nes-dialog" id="dialog-default">
+                <button type="button" class="nes-btn is-warning"
+                    onclick="document.getElementById('dialog-skillz').showModal();">???</button>
+
+                <dialog class="nes-dialog" id="dialog-skillz">
+                    <form method="dialog" @submit.prevent>
+                        <p class="title"><i class="nes-icon is-medium star"></i><span class="skills">SKILLS</span></p>
+                        <a class="close-btn"> <i class="nes-icon close is-small"
+                                onclick="document.getElementById('dialog-skillz').close();"></i></a>
+
+                        <div class="lists">
+                            <ul class="nes-list is-circle">
+                                <li v-for="skill in skillz" :key="skill">
+                                    {{skill}}
+                                </li>
+                            </ul>
+                        </div>
+
+                        <menu>
+                            <button onclick="document.getElementById('dialog-skillz').close();" type="reset"
+                                class="nes-btn">Cancel</button>
+
+                        </menu>
+                    </form>
+                </dialog>
+                <dialog class="nes-dialog" id="dialog-contact">
                     <form method="dialog" @submit.prevent="contact">
                         <p class="title">Let's build something:</p>
-                        <a id="close-btn"> <i class="nes-icon close is-small"
-                                onclick="document.getElementById('dialog-default').close();"></i></a>
+                        <a class="close-btn"> <i class="nes-icon close is-small"
+                                onclick="document.getElementById('dialog-contact').close();"></i></a>
                         <div class="nes-field">
-                            <label for="name_field">Your email</label>
-                            <input type="email" v-model="email" id="name_field" class="nes-input" required>
+                            <label for="email">Your email</label>
+                            <input autocomplete="email" type="email" v-model="email" id="email_field" class="nes-input"
+                                required>
                         </div>
 
                         <label for="textarea_field">Textarea</label>
-                        <textarea v-model="contactText" id="textarea_field" class="nes-textarea" required></textarea>
+                        <textarea autocomplete="off" v-model="contactText" id="textarea_field" class="nes-textarea"
+                            required></textarea>
 
                         <menu>
-                            <button onclick="document.getElementById('dialog-default').close();" type="reset"
+                            <button onclick="document.getElementById('dialog-contact').close();" type="reset"
                                 class="nes-btn">Cancel</button>
                             <button class="nes-btn is-primary">Confirm</button>
                         </menu>
@@ -56,10 +83,12 @@
     import '../node_modules/dialog-polyfill/dist/dialog-polyfill.css';
 
     if (process.browser) {
-        const dialogPolyfill = require('dialog-polyfill');
+        var dialogPolyfill = require('dialog-polyfill');
         if (dialogPolyfill) {
-            var dialog = document.getElementById('dialog-default');
-            dialogPolyfill.default.registerDialog(dialog);
+            const dialogContact = document.getElementById('dialog-contact');
+            dialogPolyfill.default.registerDialog(dialogContact);
+            const dialogSkillz = document.getElementById('dialog-skillz');
+            dialogPolyfill.default.registerDialog(dialogSkillz);
         }
 
 
@@ -70,12 +99,15 @@
     export default {
         data() {
             return {
-                projects: [],
-                clicked: false,
                 loaded: false,
-                showModal: false,
                 email: '',
-                contactText: ''
+                contactText: '',
+                skillz: ['javascript', 'AWS', 'emailoctopus', 'react', 'vue', 'express.js', 'socket.IO', 'angular',
+                    'sass, less', 'webpack/rollup/parcel', 'git',
+                    'node', 'jest', 'CI/CD', 'mongo-DB', 'firebase', 'postSQL', 'lambda functions', 'unit testing',
+                    'api\'s', 'excel office.js',
+                    'google-sheets api', 'twitter api', 'slack api', 'bulmaCSS', 'bootstrap', 'travis'
+                ]
             };
         },
         components: {
@@ -91,7 +123,7 @@
 
                 this.email = '';
                 this.contactText = '';
-                document.getElementById('dialog-default').close();
+                document.getElementById('dialog-contact').close();
 
                 fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
                     method: 'POST',
@@ -110,14 +142,27 @@
 
             setTimeout(() => {
                 this.loaded = true;
-            }, 150);
+            }, 100);
         }
     };
 
 </script>
 
 <style scoped>
-    #close-btn {
+    ul {
+        max-height: 49vh;
+        overflow: auto;
+    }
+
+    .button-wrapper button:first-of-type {
+        margin-right: 2rem;
+    }
+
+    .skills {
+        margin: 0.5rem;
+    }
+
+    .close-btn {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -129,7 +174,8 @@
         justify-content: space-evenly;
     }
 
-    .half-height {
+    .top-text {
+        max-width: 750px;
         height: 55%;
         margin-top: 10%;
     }
