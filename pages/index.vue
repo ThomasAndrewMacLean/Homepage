@@ -69,6 +69,12 @@
 
             <a href="mailto:hello@thomasmaclean.be?subject=Hi" target="_blank" rel="noopener noreferrer"> <i
                     class="nes-icon gmail is-large"></i></a>
+
+            <a href="https://wa.me/+32497286511?text=Hello%20Thomas" target="_blank" rel="noopener noreferrer"> <i
+                    class="nes-icon whatsapp is-large"></i></a>
+
+
+
             <a href="https://www.linkedin.com/in/thomas-andrew-maclean" target="_blank" rel="noopener noreferrer"> <i
                     class="nes-icon linkedin is-large"></i></a>
             <a href="https://github.com/ThomasAndrewMacLean" target="_blank" rel="noopener noreferrer"><i
