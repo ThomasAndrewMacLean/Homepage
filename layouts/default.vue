@@ -27,10 +27,6 @@
 </script>
 
 <style>
-    body {
-        font-family: 'Press Start 2P', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    }
-
     span.char.custom.typed {
         color: white;
     }
