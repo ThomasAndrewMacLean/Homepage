@@ -141,9 +141,10 @@
                 });
 
                 const contactDialoge = document.getElementById('dialog-contact');
-                contactDialoge.close();
 
-                if (contactDialoge.hasAttribute('open')) {}
+                if (contactDialoge.hasAttribute('open')) {
+                    contactDialoge.close();
+                }
                 // catch sentry error
                 // this.$sentry.captureException(new Error('example'));
 
