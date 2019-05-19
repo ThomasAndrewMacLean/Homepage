@@ -141,11 +141,11 @@
                 });
 
                 const contactDialoge = document.getElementById('dialog-contact');
+                contactDialoge.close();
 
-                if (contactDialoge.hasAttribute('open')) {
-                    contactDialoge.close();
-                }
-                this.$sentry.captureException(new Error('example'));
+                if (contactDialoge.hasAttribute('open')) {}
+                // catch sentry error
+                // this.$sentry.captureException(new Error('example'));
 
             }
         },
