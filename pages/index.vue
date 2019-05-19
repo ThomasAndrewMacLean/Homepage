@@ -129,7 +129,6 @@
 
                 this.email = '';
                 this.contactText = '';
-                document.getElementById('dialog-contact').close();
 
                 fetch('https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
                     method: 'POST',
@@ -141,6 +140,7 @@
                     body
                 });
 
+                document.getElementById('dialog-contact').close();
 
             }
         },
