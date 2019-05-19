@@ -145,7 +145,7 @@
                 if (contactDialoge.hasAttribute('open')) {
                     contactDialoge.close();
                 }
-
+                this.$sentry.captureException(new Error('example'));
 
             }
         },
