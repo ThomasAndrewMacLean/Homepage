@@ -103,8 +103,13 @@ module.exports = {
             {
                 id: 'UA-110018468-7'
             }
-        ]
+        ],
+        ['@nuxtjs/sentry']
     ],
+    sentry: {
+        dsn: 'https://aa89fb8694bc4a7d86f36224f888ec48@sentry.io/1462894', // Enter your project's DSN here
+        config: {} // Additional config
+    },
     /*
      ** Axios module configuration
      */
