@@ -140,7 +140,12 @@
                     body
                 });
 
-                document.getElementById('dialog-contact').close();
+                const contactDialoge = document.getElementById('dialog-contact');
+
+                if (contactDialoge.hasAttribute('open')) {
+                    contactDialoge.close();
+                }
+
 
             }
         },
