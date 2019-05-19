@@ -1,5 +1,9 @@
 <template>
     <section class="homepage">
+        <a id="success" href="#" class="nes-badge">
+            <span class="is-success">SENT</span>
+        </a>
+
         <div class="hide homepage-wrapper" :class="{ loaded:loaded }">
             <h1 class="top-text">
                 Hi, I'm Thomas, and I build things:
@@ -147,7 +151,11 @@
                 }
                 // catch sentry error
                 // this.$sentry.captureException(new Error('example'));
-
+                const badge = document.getElementById('success');
+                badge.style.display = 'block';
+                setTimeout(() => {
+                    badge.style.display = 'none';
+                }, 3500);
             }
         },
         mounted() {
@@ -161,6 +169,13 @@
 </script>
 
 <style scoped>
+    #success {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: none;
+    }
+
     ul {
         max-height: 49vh;
         overflow: auto;
