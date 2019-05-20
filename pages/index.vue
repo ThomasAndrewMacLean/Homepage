@@ -152,9 +152,9 @@
                 // catch sentry error
                 // this.$sentry.captureException(new Error('example'));
                 const badge = document.getElementById('success');
-                badge.style.display = 'block';
+                badge.style.right = '15px';
                 setTimeout(() => {
-                    badge.style.display = 'none';
+                    badge.style.right = '-200px';
                 }, 3500);
             }
         },
@@ -172,8 +172,8 @@
     #success {
         position: absolute;
         top: 15px;
-        right: 15px;
-        display: none;
+        right: -200px;
+        transition: right 0.5s ease;
     }
 
     ul {
