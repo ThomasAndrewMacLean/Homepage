@@ -121,6 +121,8 @@ module.exports = {
      ** Build configuration
      */
     build: {
+        vendor: [
+            'babel-es6-polyfill'],
         /*
          ** You can extend webpack config here
          */

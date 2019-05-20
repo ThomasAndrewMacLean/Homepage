@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "@nuxtjs/sentry": "^3.0.0",
+        "babel-es6-polyfill": "^1.1.0",
         "dialog-polyfill": "^0.5.0",
         "nes.css": "^2.1.1",
         "nuxt": "^1.0.0",
