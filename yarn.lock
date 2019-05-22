@@ -86,6 +86,10 @@
   dependencies:
     vue-analytics "^5.4.0"
 
+"@nuxtjs/google-tag-manager@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-tag-manager/-/google-tag-manager-2.2.0.tgz#ee2c78aedebcf4e0c2a42e3a53fa38023d03d1ab"
+
 "@nuxtjs/sentry@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/sentry/-/sentry-3.0.0.tgz#7ca3a25b7b2ea35a953292a7961deb515a6d9140"
