@@ -20,12 +20,12 @@
       <section class="button-wrapper">
         <button
           type="button"
-          class="nes-btn is-primary"
+          class="nes-btn is-primary contact-btn"
           onclick="document.getElementById('dialog-contact').showModal();"
         >Contact</button>
         <button
           type="button"
-          class="nes-btn is-warning"
+          class="nes-btn is-warning skilzz-btn"
           onclick="document.getElementById('dialog-skillz').showModal();"
         >???</button>
 
