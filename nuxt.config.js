@@ -56,7 +56,8 @@ module.exports = {
             },
             {
                 rel: 'stylesheet',
-                href: 'https://fonts.googleapis.com/css?family=Press+Start+2P'
+                href:
+                    'https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"'
             }
         ]
     },
@@ -122,8 +123,7 @@ module.exports = {
      ** Build configuration
      */
     build: {
-        vendor: [
-            'babel-es6-polyfill'],
+        vendor: ['babel-es6-polyfill'],
         /*
          ** You can extend webpack config here
          */
