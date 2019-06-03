@@ -40,6 +40,6 @@
         "eslint-plugin-vue": "^4.0.0",
         "lighthouse-ci": "https://github.com/ebidel/lighthouse-ci",
         "rimraf": "^2.6.2",
-        "surge": "^0.20.1"
+        "surge": "^0.21.2"
     }
 }
