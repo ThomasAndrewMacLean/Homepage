@@ -39,7 +39,8 @@
                     version: process.env.NODE_ENV == 'production' ?
                         'published' :
                         'draft',
-                    starts_with: 'projects'
+                    starts_with: 'projects',per_page: 50
+
                 })
                 .then(res => {
                     return {
