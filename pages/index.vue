@@ -254,7 +254,7 @@
         justify-content: space-evenly;
     }
     
-    @supports (-ms-accelerator: true) { /* Edge only */
+   @supports (-ms-ime-align: auto) { /* Edge only */
 
     footer {
         justify-content: space-around;
