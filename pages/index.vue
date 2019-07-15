@@ -250,8 +250,17 @@
         position: absolute;
         bottom: 0;
         display: flex;
+        justify-content: space-around; /* IE HACK */
         justify-content: space-evenly;
     }
+    
+    @supports (-ms-accelerator: true) { /* Edge only */
+
+    footer {
+        justify-content: space-around;
+    }
+
+}
 
     .homepage-wrapper {
         display: flex;
