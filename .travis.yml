@@ -14,5 +14,6 @@ deploy:
 after_success:
     - npm run lh -- https://thomasmaclean.be
 notifications:
+    webhooks: https://www.travisbuddy.com/
     slack:
         secure: ZZIxMNQs62kzTKDjb1i+uBtKF6s92uTbwTSSp9tp7joVYFsBiWNUYdjT/9sxdgmOWxc5QXWLq8T52VfIKO6I53sEcaCkZEml/dkyJl7q3K8DN1U0aF6Is/qRoILo1AHdeFk7hEPiBt1CYmGRK0E1G0IkI7KoJDqtBYDULXhY/uo7kgPu7ZKH+aTbXClDWtxNiYkzp8P/80eYXlgvnSYv77x5jnin4ME8L0tlQb62MAyfhEOmLG0HpJGR4hFmnwpS22uz8rk4ny9u+1lo8PlwYORleBW22CyR7bK9e8EuJTxSLevxFGqGmXhohh37aPCh9jbRIwhFHGeT/1z93xs5zqVnGz1wshG2j4gPXq+zDlg1ofP7Yz7jyTVDk2M6L87MMyKmZG7grNSkKi2U8jpnU6vEQni7n9Ejt2IIvICmL2ll77uM/30ozyMGFGwH0DrCO08Td8S/uYqpoHzQDw1z74/8prXtzBMH1Q57aFp0UKYeyWHpuR8gq7mRxqXdOcisSUr+8CZXwH/n10DF/CPR9RPblD8DmK+h97gJBowhTuwH6i9sfmPTZu2oWYJ7uAP6XMWtB3CvMa3qr/UW9b4jRIgxHpyd3iEhIXpdZU/gseGGpMfnC3EhgZefcHFGfJOt7kFuGy+TNjYbbeDNcRlVLMJ6Hn+FDDnFnZ6ybTis+vA=
