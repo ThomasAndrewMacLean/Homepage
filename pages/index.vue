@@ -122,6 +122,7 @@
                     'emailoctopus',
                     'react',
                     'vue',
+                    'svelte',
                     'express.js',
                     'PWA',
                     'socket.IO',
