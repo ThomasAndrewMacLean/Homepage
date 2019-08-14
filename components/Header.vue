@@ -1,13 +1,13 @@
 <template>
     <header>
         <ul class="nav-links">
-            <nuxt-link to="/" tag="li" class="nav-link" exact>
+            <nuxt-link to="/projectsoverview" tag="li" class="nav-link" exact>
                 <a>Home</a>
             </nuxt-link>
-            <nuxt-link to="/projectsoverview" tag="li" class="nav-link" exact>
+            <!-- <nuxt-link to="/projectsoverview" tag="li" class="nav-link" exact>
                 <a>Projects</a>
             </nuxt-link>
-            <!-- <nuxt-link to="/contact" tag="li" class="nav-link" exact>
+            <nuxt-link to="/contact" tag="li" class="nav-link" exact>
                 <a>Contact</a>
             </nuxt-link> -->
         </ul>
