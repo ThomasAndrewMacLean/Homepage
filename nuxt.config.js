@@ -41,6 +41,18 @@ module.exports = {
             {
                 name: 'og:image',
                 content: '/social.png'
+            },
+            {
+                name: 'og:title',
+                content: 'Thomas MacLean'
+            },
+            {
+                name: 'og:description',
+                content: pkg.description
+            },
+            {
+                name: 'og:url',
+                content: 'https://thomasmaclean.be'
             }
         ],
         link: [
