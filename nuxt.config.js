@@ -47,6 +47,10 @@ module.exports = {
                 content: 'Thomas MacLean'
             },
             {
+                name: 'og:type',
+                content: 'website'
+            },
+            {
                 name: 'og:description',
                 content: pkg.description
             },
