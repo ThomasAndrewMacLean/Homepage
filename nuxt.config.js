@@ -40,7 +40,7 @@ module.exports = {
             },
             {
                 name: 'og:image',
-                content: '/social.png'
+                content: 'https://thomasmaclean.be/social.png'
             },
             {
                 name: 'og:title',
