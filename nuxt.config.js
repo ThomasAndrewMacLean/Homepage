@@ -40,7 +40,7 @@ module.exports = {
             },
             {
                 name: 'og:image',
-                content: 'social.png'
+                content: '/social.png'
             }
         ],
         link: [
