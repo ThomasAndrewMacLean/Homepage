@@ -37,6 +37,10 @@ module.exports = {
             {
                 name: 'theme-color',
                 content: 'lightseagreen'
+            },
+            {
+                name: 'og:image',
+                content: 'social.png'
             }
         ],
         link: [
