@@ -340,11 +340,12 @@
   dependencies:
     core-js "^2.5.7"
 
-"@nuxtjs/google-analytics@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.0.2.tgz#75353143628fd7697b41eb5aa7da38a513394eca"
+"@nuxtjs/google-analytics@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-2.2.1.tgz#c5bcf486fe04168d4bb044e6f3fe317d7a3a8d50"
+  integrity sha512-li2Xd9G1v6+wdAiAM+G7USTrQ+/ND/fmf02cKs5IRLbKxba+RHDePKu4s5kvWyrgeczgZRaL+Tm4s24mGDYS6g==
   dependencies:
-    vue-analytics "^5.4.0"
+    vue-analytics "^5.17.2"
 
 "@nuxtjs/google-tag-manager@^2.2.0":
   version "2.2.0"
@@ -7211,9 +7212,10 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-analytics@^5.4.0:
-  version "5.16.0"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.0.tgz#82e88703a0678cba076d51acacd6569bc8f7d54c"
+vue-analytics@^5.17.2:
+  version "5.17.2"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.2.tgz#5a43cbd907a8b5d2c27e3df5046245604fa8c83e"
+  integrity sha512-Vfbn5laOG8OVetrBNRfV64y/N5VVyw1PPC4LiowZFh58UOsfsGH8w+ZZn0pyMelSZmz9uxkgG5dNnce4bwJ6jg==
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
