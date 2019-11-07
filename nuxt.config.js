@@ -74,6 +74,11 @@ module.exports = {
                 rel: 'canonical',
                 href: 'https://thomasmaclean.be/'
             },
+              {
+                rel: 'preconnect',
+                href: 'https://fonts.gstatic.com/',
+                  crossorigin: 'true'
+            },
             {
                 rel: 'stylesheet',
                 href:
