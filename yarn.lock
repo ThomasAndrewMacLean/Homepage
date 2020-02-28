@@ -346,9 +346,12 @@
   dependencies:
     vue-analytics "^5.4.0"
 
-"@nuxtjs/google-tag-manager@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/google-tag-manager/-/google-tag-manager-2.2.0.tgz#ee2c78aedebcf4e0c2a42e3a53fa38023d03d1ab"
+"@nuxtjs/google-tag-manager@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-tag-manager/-/google-tag-manager-2.4.0.tgz#f72b4893900aa6e0c79ec9073b0aabce93f348d9"
+  integrity sha512-NWQarN9urn0fPCa6vmmbJeNNj52im9JYSn5+5t61AMiw54x1pNBLROwNzuKu8zWO0kYOR+3dUg0Ah5EKGL82KA==
+  dependencies:
+    lodash "^4.17.15"
 
 "@nuxtjs/icon@3.0.0-beta.16":
   version "3.0.0-beta.16"
@@ -4339,6 +4342,11 @@ lodash@^4.14.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
 lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+
+lodash@^4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-symbols@^2.1.0:
   version "2.2.0"
