@@ -19,7 +19,7 @@
         "deploy": "nuxt generate && surge ./dist && rimraf ./dist"
     },
     "dependencies": {
-        "@nuxtjs/google-tag-manager": "^2.2.0",
+        "@nuxtjs/google-tag-manager": "^2.4.0",
         "@nuxtjs/pwa": "^3.0.0-beta.16",
         "@nuxtjs/sentry": "^3.0.0",
         "babel-es6-polyfill": "^1.1.0",
