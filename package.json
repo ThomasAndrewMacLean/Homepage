@@ -26,7 +26,7 @@
         "dialog-polyfill": "^0.5.0",
         "nes.css": "^2.1.1",
         "nuxt": "^1.0.0",
-        "storyblok-nuxt": "^0.0.9",
+        "storyblok-nuxt": "^1.2.0",
         "vue-typer": "^1.2.0"
     },
     "devDependencies": {
