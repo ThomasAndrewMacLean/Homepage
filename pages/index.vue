@@ -76,7 +76,7 @@
                 <i class="nes-icon gmail is-large"></i>
             </a>
 
-            <a href="https://wa.me/+32497286511?text=Hello%20Thomas" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/32497286511?text=Hello%20Thomas" target="_blank" rel="noopener noreferrer"
                 class="link-whatsapp" aria-label="send me an message using whatsapp">
                 <i class="nes-icon whatsapp is-large"></i>
             </a>
