@@ -10,7 +10,7 @@
                 <br>
                 <no-ssr placeholder="...">
                     <vue-typer :repeat="0" :erase-delay="250"
-                        :text="['websites', 'cloud solutions', 'excel add-ons', 'web applications', 'slackbots', 'api\'s', '...', 'what can I build for you?', ]">
+                        :text="['websites', 'cloud solutions', 'shopify e-shops', 'excel add-ons', 'web applications', 'slackbots', 'api\'s', '...', 'what can I build for you?', ]">
                     </vue-typer>
                 </no-ssr>
             </h1>
@@ -119,19 +119,15 @@
                 skillz: [
                     'javascript',
                     'AWS',
-                    'emailoctopus',
+                    'nextJS',
                     'react',
+                    'shopify',
                     'vue',
                     'svelte',
-                    'express.js',
                     'PWA',
                     'socket.IO',
-                    'angular',
-                    'sass',
-                    'less',
-                    'webpack',
-                    'rollup',
-                    'parcel',
+
+
                     'git',
                     'node',
                     'jest',
@@ -169,7 +165,7 @@
 
                 try {
                     fetch(
-                        'https://yawxz3ocl1.execute-api.eu-west-1.amazonaws.com/dev/contactform', {
+                        'https://mailserver-thomas.vercel.app/api/thomasmaclean', {
                             method: 'POST',
                             mode: 'no-cors',
                             headers: {
