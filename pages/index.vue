@@ -81,6 +81,11 @@
                 <i class="nes-icon whatsapp is-large"></i>
             </a>
 
+            <a href="https://www.instagram.com/thomasandrewmaclean/" target="_blank" rel="noopener noreferrer"
+                class="link-instagram" aria-label="check out my instagram profile">
+                <i class="nes-icon instagram is-large"></i>
+            </a>
+
             <a href="https://www.linkedin.com/in/thomas-andrew-maclean" target="_blank" rel="noopener noreferrer"
                 class="link-linkedin" aria-label="check out my linkedin profile">
                 <i class="nes-icon linkedin is-large"></i>
