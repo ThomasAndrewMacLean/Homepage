@@ -245,6 +245,7 @@
         max-width: 750px;
         height: 55%;
         margin-top: 10%;
+        font-size: 24px;
     }
 
     footer {
